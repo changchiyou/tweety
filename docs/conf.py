@@ -66,8 +66,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Tweety'
-copyright = '2022 - 2024, mahrtayyab'
-author = 'mahrtayyab'
+copyright = '2026, changchiyou'
+author = 'changchiyou'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

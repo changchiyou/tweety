@@ -33,9 +33,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/mahrtayyab/tweety"
+Homepage = "https://github.com/changchiyou/tweety"
 Documentation = "https://mahrtayyab.github.io/tweety_docs/"
-"Bug Tracker" = "https://github.com/mahrtayyab/tweety/issues"
+"Bug Tracker" = "https://github.com/changchiyou/tweety/issues"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

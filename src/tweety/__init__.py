@@ -1,6 +1,8 @@
-__version__ = "2.4.1"
-__author__ = "mahrtayyab"
-
+try:
+    from ._version import __version__
+except ImportError:
+    __version__ = "unknown"
+__author__ = "changchiyou" 
 
 import inspect
 from .bot import BotMethods
