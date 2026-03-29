@@ -1,19 +1,17 @@
 # tweety
 Reverse Engineered Twitter Frontend API.
 
-[![Downloads](https://static.pepy.tech/personalized-badge/tweety-ns?period=total&units=international_system&left_color=orange&right_color=blue&left_text=Downloads)](https://pepy.tech/project/tweety-ns) [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/mahrtayyab/tweety)
+[![Downloads](https://static.pepy.tech/personalized-badge/tweety-changchiyou?period=total&units=international_system&left_color=orange&right_color=blue&left_text=Downloads)](https://pepy.tech/project/tweety-changchiyou) [![PyPI](https://img.shields.io/pypi/v/tweety-changchiyou)](https://pypi.org/project/tweety-changchiyou/)
 
-## Installation: 
+## Installation:
 ```bash
-pip install tweety-ns
+pip install tweety-changchiyou
 ```
 
 ## Keep synced with latest fixes
 
-##### **Pip might not be always updated , so to keep everything synced.**
-
 ```bash
-pip install https://github.com/mahrtayyab/tweety/archive/main.zip --upgrade 
+pip install https://github.com/changchiyou/tweety/archive/main.zip --upgrade
 ```
 
 ## A Quick Example:
@@ -34,6 +32,10 @@ pip install https://github.com/mahrtayyab/tweety/archive/main.zip --upgrade
 > [!IMPORTANT] 
 > Even Twitter Web Client has a lot of rate limits now, Abusing tweety can lead to `read_only` Twitter account.
 
-Do check [FAQs](https://github.com/mahrtayyab/tweety/wiki/FAQs)
+Do check [FAQs](https://github.com/changchiyou/tweety/wiki/FAQs)
 
 Full Documentation and Changelogs are [here](https://mahrtayyab.github.io/tweety_docs/)
+
+## Fork Information
+
+This is a fork maintained by [changchiyou](https://github.com/changchiyou). Original project by [mahrtayyab](https://github.com/mahrtayyab/tweety).
