@@ -1,9 +1,47 @@
 [build-system]
-requires = [
-    "setuptools>=42",
-    "wheel"
-]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
 build-backend = "setuptools.build_meta"
 
-[tool.poetry.extras]
-windows = ["python-magic-bin"]
+[project]
+name = "tweety-ns"
+dynamic = ["version"]
+authors = [
+    {name = "Tayyab Kharl", email = "tayyabmahr@gmail.com"}
+]
+description = "An easy Twitter Scraper"
+readme = "README.md"
+license = {text = "MIT AND (Apache-2.0 OR BSD-2-Clause)"}
+requires-python = ">=3.9"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+keywords = ["TWITTER", "TWITTER SCRAPE", "SCRAPE TWEETS"]
+dependencies = [
+    "beautifulsoup4[lxml]~=4.12",
+    "openpyxl",
+    "httpx[http2]",
+    "dateutils",
+    "anticaptchaofficial",
+    "capsolver",
+    "2captcha-python",
+    "python-magic",
+    "python-magic-bin; platform_system == 'Windows'",
+]
+
+[project.urls]
+Homepage = "https://github.com/mahrtayyab/tweety"
+Documentation = "https://mahrtayyab.github.io/tweety_docs/"
+"Bug Tracker" = "https://github.com/mahrtayyab/tweety/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools_scm]
+version_file = "src/tweety/_version.py"
