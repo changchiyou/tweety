@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "tweety-changchiyou"
 dynamic = ["version"]
 authors = [
-    {name = "changchiyou", email = "changchiyougmail.com"}
+    {name = "changchiyou", email = "changchiyou@gmail.com"}
 ]
 description = "An easy Twitter Scraper"
 readme = "README.md"
