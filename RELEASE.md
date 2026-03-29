@@ -6,11 +6,23 @@ This project uses `pyproject.toml` and `setuptools-scm` for automatic version ma
 
 All package configuration has been migrated to `pyproject.toml`. The version number is automatically derived from Git tags using `setuptools-scm`, and written to `src/tweety/_version.py` (which is gitignored).
 
-## Setup PyPI Token
+## Setup PyPI Trusted Publisher
 
-1. Create an API token at https://pypi.org/manage/account/token/
-2. Go to GitHub repository Settings → Secrets and variables → Actions
-3. Add a secret named `PYPI_API_TOKEN`
+This project uses PyPI Trusted Publishers for secure, token-free authentication.
+
+### First-time setup (before first release)
+
+1. Go to https://pypi.org/manage/account/publishing/
+2. Add a new pending publisher with:
+   - PyPI Project Name: `tweety-changchiyou`
+   - Owner: `changchiyou`
+   - Repository name: `tweety`
+   - Workflow name: `release.yml`
+3. Save the configuration
+
+The first time you push a tag, PyPI will automatically create the project and link it to your GitHub workflow. Subsequent releases will work automatically.
+
+No API tokens needed.
 
 ## Release a New Version
 

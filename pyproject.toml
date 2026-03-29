@@ -3,10 +3,10 @@ requires = ["setuptools>=64", "setuptools-scm>=8"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tweety-ns"
+name = "tweety-changchiyou"
 dynamic = ["version"]
 authors = [
-    {name = "Tayyab Kharl", email = "tayyabmahr@gmail.com"}
+    {name = "changchiyou", email = "changchiyougmail.com"}
 ]
 description = "An easy Twitter Scraper"
 readme = "README.md"
