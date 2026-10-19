@@ -285,8 +285,14 @@ class Request:
                 home_page = bs4.BeautifulSoup(response.content, 'lxml')
 
             if not find_on_demand_file(str(home_page)):
-                response = await self._session.request(method="GET", url="https://x.com/home", headers=headers)
-                home_page = bs4.BeautifulSoup(response.content, 'lxml')
+                # Logged-out x.com now serves the new x-web bundle which carries no
+                # ondemand.s manifest; /home and /i/jf/ still serve the legacy
+                # responsive-web layout that does. Try each until one matches.
+                for fallback_url in ("https://x.com/home", "https://x.com/i/jf/"):
+                    response = await self._session.request(method="GET", url=fallback_url, headers=headers)
+                    home_page = bs4.BeautifulSoup(response.content, 'lxml')
+                    if find_on_demand_file(str(home_page)):
+                        break
         except Exception as twitter_home_error:
             raise ValueError(f"Unable to get Twitter Home Page : {str(twitter_home_error)}")
         return home_page
